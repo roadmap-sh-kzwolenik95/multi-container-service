@@ -1,6 +1,6 @@
 services:
   api:
-    build: ./hello-world-app
+    image: registry.digitalocean.com/roadmapsh/hello-world-app
     restart: always
     ports:
       - "80:80"
