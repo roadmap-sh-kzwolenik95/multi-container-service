@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 const port = 80;
+const mongoUrl = process.env.MONGO_URL;
 
 const todoSchema = new mongoose.Schema(
   {
@@ -24,7 +25,7 @@ const todoSchema = new mongoose.Schema(
 const Todo = new mongoose.model("Todo", todoSchema);
 
 mongoose
-  .connect("mongodb://localhost:27017/todos", {
+  .connect(`${mongoUrl}todos`, {
     serverSelectionTimeoutMS: 5000,
   })
   .then(() => console.log("Connected to MongoDB"))
