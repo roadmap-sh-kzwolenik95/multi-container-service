@@ -4,7 +4,7 @@ terraform {
     hostname     = "app.terraform.io"
 
     workspaces {
-      name = "dockerized-service-deployment"
+      name = "multi-container-service"
     }
   }
   required_providers {
