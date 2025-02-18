@@ -1,3 +1,5 @@
+# Test the app with cURL
+
 Set the API_URL:
 
 ```sh
